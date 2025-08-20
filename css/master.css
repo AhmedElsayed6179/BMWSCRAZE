@@ -121,6 +121,7 @@ body {
         height: auto;
         width: 100%;
         overflow-x: hidden;
+        background-color: black;
     }
 
     .information {
@@ -500,5 +501,6 @@ header {
     opacity: 1;
     transform: translate(0, 0);
 }
+
 
 /* End About_Us */
