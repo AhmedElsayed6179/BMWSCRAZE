@@ -1,0 +1,421 @@
+/* Start Variables */
+:root {
+    --mainColor: black;
+    --secondary-color: white;
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    text-transform: capitalize;
+    padding-top: 80px;
+    margin: 0;
+}
+
+::selection {
+    color: var(--mainColor);
+    background-color: var(--secondary-color);
+}
+
+/* Small devices (mobile) */
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 300px;
+    }
+
+    .about_us {
+        padding: 120px 15px 20px 15px;
+        height: auto;
+    }
+
+    header {
+        padding-top: 80px;
+    }
+
+    .right_about_us {
+        margin-top: 15px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .bmw_gif {
+        width: 95%;
+        max-width: 400px;
+        margin: 20px auto;
+        overflow: visible;
+        z-index: 5;
+    }
+
+    .bmw_gif img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .about_us h1 {
+        font-size: 2rem;
+    }
+
+    .contact_us img {
+        width: 30px;
+        margin-top: 15px;
+        margin-right: 8px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .url {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo_word h1 {
+        font-size: 24px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    body {
+        padding-top: 150px;
+    }
+
+    .about_us {
+        padding: 150px 20px 30px 20px;
+        height: auto;
+    }
+
+    header {
+        padding-top: 100px;
+    }
+
+    .right_about_us {
+        margin-top: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .bmw_gif {
+        width: 90%;
+        max-width: 500px;
+        margin: 20px auto;
+        overflow: visible;
+        z-index: 5;
+    }
+
+    .bmw_gif img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .about_us h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact_us img {
+        width: 35px;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .url {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo_word h1 {
+        font-size: 28px;
+    }
+}
+
+/* End Global Rules */
+/* Start Navbar */
+.nav_page {
+    background-color: var(--mainColor);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left_side,
+.middle_side,
+.right_side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo_word h1 {
+    color: var(--secondary-color);
+    font-size: 35px;
+    line-height: 30px;
+}
+
+.url {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: #eeeeeecc;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: var(--secondary-color);
+}
+
+.btn {
+    background-color: var(--mainColor);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    padding: 8px 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--mainColor);
+}
+
+.logo img {
+    width: 50px;
+}
+
+/* End Navbar */
+/* Start Header */
+header {
+    padding-top: 50px;
+    text-align: center;
+    background-color: var(--mainColor);
+    color: var(--secondary-color);
+}
+
+.welcome h1 {
+    font-size: 4rem;
+    margin: 15px 0 0 0;
+    line-height: 1.2;
+}
+
+.edit_h1 {
+    display: inline-block;
+    background-image: linear-gradient(to top, var(--mainColor), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.bmw_first img {
+    width: 80%;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* End Header */
+/* Start About_Us */
+.about_us {
+    margin: 0;
+    color: var(--secondary-color);
+    background-color: var(--mainColor);
+    padding: 70px 60px 30px 60px;
+    color: var(--secondary-color);
+    background-color: var(--mainColor);
+    height: 700px;
+}
+
+.right_about_us img {
+    width: 40px;
+}
+
+.about_us h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.right_about_us {
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.right_about_us.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact_us a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    display: inline-block;
+}
+
+.contact_us img {
+    margin-top: 30px;
+    margin-right: 15px;
+    width: 40px;
+    background: none;
+    opacity: 0.5;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.contact_us img:hover {
+    opacity: 1;
+    filter: brightness(0) invert(1.2);
+}
+
+.contact_us {
+    margin-top: 30px;
+}
+
+.information {
+    position: relative;
+    background-image: url(../img/car\ 2.jpg);
+    background-color: var(--mainColor);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.information::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.information .right_about_us {
+    position: relative;
+    z-index: 2;
+}
+
+.bmw_gif {
+    width: 50%;
+    max-width: none;
+    position: relative;
+    margin-left: 20%;
+    margin-top: 20px;
+    overflow: visible;
+    z-index: 5;
+}
+
+.bmw_gif::before {
+    z-index: 1;
+}
+
+.bmw_gif img {
+    width: 100%;
+    display: block;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* End About_Us */
