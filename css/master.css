@@ -452,7 +452,7 @@ header {
 
 .information {
     position: relative;
-    background-image: url(../img/car\ 2.jpg);
+    background-image: url(../img/car\.jpg);
     background-color: var(--mainColor);
     background-size: contain;
     background-position: left;
@@ -501,5 +501,6 @@ header {
     opacity: 1;
     transform: translate(0, 0);
 }
+
 
 /* End About_Us */
