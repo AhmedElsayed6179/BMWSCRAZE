@@ -28,9 +28,12 @@ const handleScrollAnimation = () => {
 
 window.addEventListener("scroll", handleScrollAnimation);
 
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".url");
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+  const urlMenu = document.querySelector(".url");
 
-mobileMenuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  mobileMenuBtn.addEventListener("click", () => {
+    urlMenu.classList.toggle("active");
+  });
 });
+
